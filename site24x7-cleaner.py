@@ -39,6 +39,6 @@ print('\n' + str(len(to_delete)) + ' monitors to delete : ' + joined_ids)
 confirm = raw_input('\nAre you sure you want to delete all the down monitors? (yes to continue)\n')
 if confirm == 'yes':
     r = requests.delete(delete_url, headers = headers)
-    print(str(len(to_delete)) + ' monitors deleted')
+    print(r.text)
 else:
     print('Deletion Cancelled')
